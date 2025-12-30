@@ -1,0 +1,4 @@
+[phases.setup]
+aptPkgs = [
+  "php82Extensions.gd"
+]
