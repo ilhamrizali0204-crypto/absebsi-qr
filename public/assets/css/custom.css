@@ -1,0 +1,246 @@
+/* =========================================================
+   1. GLOBAL COLORS & UTILITIES
+========================================================= */
+
+/* Gradient utama */
+.bg-gradient-primary {
+  background: linear-gradient(195deg, #7d64eb, #693aeb) !important;
+}
+
+.bg-gradient-success {
+  background: linear-gradient(195deg, #2ed428, #5dc76d) !important;
+}
+
+/* Chart styling */
+#chart-bars,
+#chart-line {
+  border-radius: 12px;
+}
+
+/* =========================================================
+   2. NAVBAR & LAYOUT (DESKTOP & GLOBAL)
+========================================================= */
+
+/* Navbar utama (desktop & umum) */
+.navbar-main {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: #ffffff;
+}
+
+/* =========================================================
+   3. CARD & SCROLL BEHAVIOR
+========================================================= */
+
+/* Card header sticky (untuk card yang di-scroll) */
+.card-scroll .card-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* =========================================================
+   4. TABLE SCROLL & STICKY HEADER
+========================================================= */
+
+.table-wrapper {
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Table header sticky */
+.sticky-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #ffffff;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* =========================================================
+   5. MOBILE LAYOUT FIX (SIDEBAR & NAVBAR)
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Sidebar selalu di atas */
+  aside.sidenav {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 1100 !important;
+  }
+
+  /* Navbar berada di bawah sidebar */
+  .navbar-main {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Konten turun agar tidak tertutup navbar */
+  .main-content {
+    padding-top: 90px !important;
+  }
+
+  nav.navbar {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* =========================================================
+   6. MOBILE CARD UI (KOMPAK & RAPIH)
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Grid card mobile (2 kolom) */
+  .col-xl-3,
+  .col-lg-3,
+  .col-md-6 {
+    width: 50% !important;
+    max-width: 50% !important;
+    padding: 6px !important;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Card spacing */
+  .card {
+    margin-bottom: 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .card-header,
+  .card-body {
+    padding: 12px !important;
+  }
+
+  /* Typography card */
+  .card h5,
+  .card h6 {
+    font-size: 13px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .card h3,
+  .card h4 {
+    font-size: 16px !important;
+  }
+
+  .card p {
+    font-size: 11px !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Icon statistik */
+  .icon-shape {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .icon-shape i {
+    font-size: 16px !important;
+  }
+
+  /* Table mobile */
+  .table-wrapper {
+    max-height: 55vh;
+  }
+}
+
+/* =========================================================
+   7. LIST & INTERACTION EFFECT
+========================================================= */
+
+.list-group-item {
+  transition: background 0.2s ease;
+}
+
+.list-group-item:hover {
+  background: #f5f5f5;
+}
+
+/* =========================================================
+   8. TYPOGRAPHY CONTROL
+========================================================= */
+
+/* Default judul card */
+.card-header h5 {
+  font-weight: 700;
+}
+
+/* Data siswa tidak bold
+   Gunakan class="data-siswa" di wrapper blade */
+.data-siswa * {
+  font-weight: 400 !important;
+}
+
+/* Table data ringan */
+.table tbody td {
+  font-weight: 300 !important;
+}
+
+/* =========================================================
+   DASHBOARD ADMIN - MOBILE 3 CARD SEJAJAR
+========================================================= */
+@media (max-width: 768px) {
+
+  .dashboard-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+
+  /* 3 card = masing-masing 33.333% */
+  .dashboard-cards > div {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 6px;
+  }
+
+  /* Card lebih kecil & rapih */
+  .dashboard-cards .card {
+    height: 100%;
+    margin-bottom: 0 !important;
+    border-radius: 10px;
+  }
+
+  /* Header card */
+  .dashboard-cards .card-header {
+    padding: 10px !important;
+  }
+
+  /* Footer card */
+  .dashboard-cards .card-footer {
+    padding: 8px !important;
+  }
+
+  /* Text diperkecil */
+  .dashboard-cards p {
+    font-size: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .dashboard-cards h4 {
+    font-size: 14px !important;
+  }
+
+  /* Icon diperkecil */
+  .dashboard-cards .icon-shape {
+    width: 20px !important;
+    height: 40px !important;
+    min-width: 40px;
+  }
+
+  .dashboard-cards .icon-shape i {
+    font-size: 14px !important;
+  }
+}
+
